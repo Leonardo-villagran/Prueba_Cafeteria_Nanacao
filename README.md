@@ -35,7 +35,8 @@ El archivo `index.test.js` contiene las pruebas unitarias para las diferentes ru
 
 1. Prueba 1: `GET /cafes` debe devolver un arreglo con al menos un objeto.
    - Se verifica que la respuesta tenga un código de estado 200.
-   - Se verifica que la respuesta sea un objeto y no esté vacío.
+   - Se verifica que la respuesta sea un objeto.
+   - Se verifica que exista al menos un objeto.
 
 2. Prueba 2: `DELETE /cafes/:id` al intentar eliminar un café con un ID inexistente debe devolver un código 404.
    - Se envía una solicitud DELETE con un ID inexistente.
@@ -44,6 +45,7 @@ El archivo `index.test.js` contiene las pruebas unitarias para las diferentes ru
 
 3. Prueba 3: `POST /cafes` debe agregar un nuevo café y devolver un código 201.
    - Se envía una solicitud POST con los datos de un nuevo café.
+   - Se verifica que se ha agregado un objeto al listado de cafés.
    - Se verifica que la respuesta tenga un código de estado 201.
 
 4. Prueba 4: `PUT /cafes/:id` debe devolver un código 400 si se intenta actualizar un café con un ID diferente al del payload.
