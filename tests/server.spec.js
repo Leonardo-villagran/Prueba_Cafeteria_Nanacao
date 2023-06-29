@@ -2,12 +2,11 @@ const request = require('supertest');
 const server = require('../index'); 
 
 describe('Pruebas de la API de la Cafetería Nanacao', () => {
-
-    // Prueba 1: GET /cafes debe devolver un arreglo con al menos un objeto
+        // Prueba 1: GET /cafes debe devolver un arreglo con al menos un objeto
     it('GET /cafes devuelve un status code 200 y un arreglo con al menos un objeto', async () => {
         const response = await request(server).get('/cafes').send();
         expect(response.statusCode).toBe(200);
-        expect(response.body).toBeInstanceOf(Object);
+        expect(response.body).toBeInstanceOf(Array);
         expect(response.body.length).toBeGreaterThan(0);
     });
 

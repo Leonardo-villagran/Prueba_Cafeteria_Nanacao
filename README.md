@@ -35,8 +35,8 @@ El archivo `index.test.js` contiene las pruebas unitarias para las diferentes ru
 
 1. Prueba 1: `GET /cafes` debe devolver un arreglo con al menos un objeto.
    - Se verifica que la respuesta tenga un código de estado 200.
-   - Se verifica que la respuesta sea un objeto.
-   - Se verifica que exista al menos un objeto.
+   - Se verifica que la respuesta sea un arreglo de objetos.
+   - Se verifica que exista al menos un objeto dentro del arreglo.
 
 2. Prueba 2: `DELETE /cafes/:id` al intentar eliminar un café con un ID inexistente debe devolver un código 404.
    - Se envía una solicitud DELETE con un ID inexistente.
